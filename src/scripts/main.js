@@ -21,8 +21,8 @@ const contaAsHoras = setInterval(function() {     /* Esse código continuará a 
 
     document.getElementById('contador').innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`;
 
-    if (distanciaAteOEvento < 0) {
-        clearInterval(contaAsHoras);
+    if (distanciaAteOEvento < 0) {      /* a função contaAsHoras vai parar qnd a contagem regressiva ate o evento seja 0 */
+        clearInterval(contaAsHoras); /* clearInterval é uma função em JavaScript usada para interromper a execução contínua de um intervalo que foi previamente iniciado com setInterval*/
         document.getElementById('contador').innerHTML = 'Evento expirado';
-    }
+    }       /* msg que vai aparecer quando a subtracao das const do evento futuro e evento agora forem 0 */
 }, 1000);
