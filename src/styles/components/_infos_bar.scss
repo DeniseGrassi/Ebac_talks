@@ -1,0 +1,45 @@
+@use '../variables'; 
+// dois pontos e / pq esta saindo da pasta 
+
+
+.infos-bar {
+    padding: 16px 24px;
+    background-color: variables.$textColor;
+    display: flex;
+    justify-content: space-between;  /* add para o botao ficar espaçado no container */
+
+    &__infos{
+        display: flex; /* pq os elementos do <ul> estarao um ao ldo do outro */
+        gap:40px; 
+
+        &__item{
+            font-size: 14px;
+            color:variables.$secondaryTextColor;
+
+            b {
+                font-size: 18px;
+                display: block;
+                color:variables.$secondaryTextColor;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__infos{ 
+            gap:16px;            
+        }        
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+
+        &__infos{ 
+            display: block;
+
+            &__item{
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,26 @@
+@use '../variables';
+// dois pontos e / pq esta saindo da pasta 
+
+.button {   /* CONF DE BOTAO GENERICO*/
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap; /* forcando o texto dentro do botao a n quebrar a linha */
+
+    &--primary {  /* CONF ESPECIFICA PARA O PRIMEIRO BOTAO*/
+        color:variables.$textColor;
+        background-color: variables.$purple;
+    }
+
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center;        
+    }
+
+    @media (max-width: 640px) {
+        display: block; /* o display: block ja eh suficiente para uma classe ocupar uma linha */
+        width: 100%;        
+    }
+}
